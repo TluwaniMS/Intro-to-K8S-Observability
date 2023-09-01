@@ -57,3 +57,27 @@ To implement cluster-level logging, you'll need a distinct backend system for st
 2. Within an application pod, there exists a dedicated sidecar container designed specifically for handling logging tasks. This sidecar container actively streams application logs to its own standard output. It is equipped with a logging agent configured to retrieve logs from an application container. These sidecar containers are capable of reading logs from various sources such as files, sockets, or journald, and each of them forwards logs to its respective standard output or standard error stream.
 
 3. Alternatively, logs can be directly pushed to a backend from within an application. However, it's important to note that cluster-level logging, which involves exposing or pushing logs from every application, falls outside the purview of Kubernetes.
+
+# Distributed Tracing
+
+## What is distributed tracing?
+
+Distributed tracing pertains to techniques for monitoring requests as they traverse across distributed systems. 
+
+It serves as a diagnostic method that unveils the coordination among various services in managing individual user requests. 
+
+Typically, a single trace illustrates the actions involved in an individual transaction or request within the monitored application, tracking the journey from the browser or mobile device to the database and back.
+
+# Anatomy of a trace
+
+Within the context of distributed tracing, a singular trace encompasses a sequence of time intervals labeled as "spans." 
+
+These spans are characterized by both a starting and concluding time, and they may, if needed, incorporate additional information such as logs or tags that aid in characterizing "what occurred." 
+
+Moreover, these spans possess connections with one another, including parent-child associations, which serve to illustrate the precise route a given transaction follows as it traverses the various services or components constituting the application.
+
+- A "Trace" signifies a request that spans from its inception to its completion, comprising either individual or multiple "Spans."
+
+- A "Span" characterizes the work executed by a single service within defined time intervals and comes with accompanying metadata. These "Spans" serve as the fundamental components of a "Trace."
+
+- "Tags" are metadata elements utilized to provide context to a "Span."
