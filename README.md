@@ -11,3 +11,26 @@ collecting time-based metrics, aggregating logs, and performing traces of reques
 * Metrics
 * Logs
 * Tracing
+
+
+# Monitoring:
+
+# The two types of monitoring: 
+
+i. Blackbox Monitoring:
+* Measurement from outside
+* Hardware issues
+* CPU load average
+* Hypervisor-level metrics
+
+ii. Whitebox monitoring:
+* Inside Knowledge of a system
+* Mysql Query time 
+* HTTP Requests
+* Service Traffic Patterns
+
+
+`NB!`
+
+`Observability provides both blackbox and white box monitoring, to give more context.`
+  
