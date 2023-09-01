@@ -2,9 +2,9 @@
 
 # What is observability ?
 
-The traditional definition of observability with regards to distributed systems has been based on three pillars; 
+The conventional understanding of observability in the context of distributed systems has traditionally revolved around three core elements:
 
-collecting time-based metrics, aggregating logs, and performing traces of requests as they flow through your system.
+gathering time-based metrics, consolidating logs, and conducting request traces as they traverse your system.
 
 # The three pillars of observability:
 
@@ -36,4 +36,10 @@ ii. Whitebox monitoring:
 
 # Kubernetes Logging
 
+Application logs provide insights into the internal workings of your application, serving as valuable tools for troubleshooting issues and overseeing cluster operations.
 
+The most straightforward and widely embraced logging approach for containerized applications involves directing log output to standard output and standard error streams.
+
+Within a cluster environment, it's advisable for logs to be managed independently of nodes, pods, or containers, with a dedicated storage system and lifecycle. This approach is commonly referred to as "cluster-level logging."
+
+To implement cluster-level logging, you'll need a distinct backend system for storing, analyzing, and querying logs.
