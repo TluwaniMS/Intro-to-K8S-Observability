@@ -33,4 +33,7 @@ ii. Whitebox monitoring:
 `NB!`
 
 `Observability provides both blackbox and white box monitoring, to give more context.`
-  
+
+# Kubernetes Logging
+
+
